@@ -1,17 +1,10 @@
-import axios from "axios"
-import { useEffect } from "react"
+import Products from "./pages/Products/index"
 
 function App() {
-  useEffect(()=>{
-    axios.get('https://fakestoreapi.com/products/1')
-    .then((res)=>{
-      console.log(res.data)
-    })
-  }, [])
 
   return (
     <>
-      <h1>App</h1>
+      <Products />
     </>
   )
 }

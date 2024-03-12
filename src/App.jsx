@@ -1,8 +1,17 @@
+import axios from "axios"
+import { useEffect } from "react"
+
 function App() {
+  useEffect(()=>{
+    axios.get('https://fakestoreapi.com/products/1')
+    .then((res)=>{
+      console.log(res.data)
+    })
+  }, [])
 
   return (
     <>
-      <h1>This is my first line</h1>
+      <h1>App</h1>
     </>
   )
 }
